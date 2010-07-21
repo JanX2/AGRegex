@@ -536,6 +536,80 @@
 			};
 			name = Release;
 		};
+		3DC1F8B611F6FB1E00ED202E /* Release Clang */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				LIBRARY_STYLE = DYNAMIC;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fconstant-cfstrings";
+				PREBINDING = YES;
+				SDKROOT = macosx10.6;
+				SYMROOT = ../../build;
+				UNSTRIPPED_PRODUCT = YES;
+				VALID_ARCHS = "x86_64 i386 ppc ppc7400 ppc970";
+				ZERO_LINK = NO;
+			};
+			name = "Release Clang";
+		};
+		3DC1F8B711F6FB1E00ED202E /* Release Clang */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXPORTED_SYMBOLS_FILE = AGRegex.exp;
+				FRAMEWORK_VERSION = A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SUPPORT_UTF8,
+					SUPPORT_UCP,
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x900000,
+				);
+				PRODUCT_NAME = AGRegex;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ../../build;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = "Release Clang";
+		};
+		3DC1F8B811F6FB1E00ED202E /* Release Clang */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INFOPLIST_FILE = "Info-RegexTest.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RegexTest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release Clang";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,6 +618,7 @@
 			buildConfigurations = (
 				1C3260050865DDF000357DB1 /* Development */,
 				1C9AED51086B1909008ED7AD /* Release */,
+				3DC1F8B611F6FB1E00ED202E /* Release Clang */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
@@ -553,6 +628,7 @@
 			buildConfigurations = (
 				1C6A0C320865E09C009EE6D2 /* Development */,
 				1C9AED4F086B1909008ED7AD /* Release */,
+				3DC1F8B711F6FB1E00ED202E /* Release Clang */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
@@ -562,6 +638,7 @@
 			buildConfigurations = (
 				1C6A0C480865E09C009EE6D2 /* Development */,
 				1C9AED50086B1909008ED7AD /* Release */,
+				3DC1F8B811F6FB1E00ED202E /* Release Clang */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
