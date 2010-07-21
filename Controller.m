@@ -59,7 +59,7 @@
 - (IBAction)openDocument:(id)sender {
 	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
 	if ([openPanel runModalForTypes:nil] == NSOKButton) {
-		[textView setString:[NSString stringWithContentsOfFile:[openPanel filename]]];
+		[textView setString:[NSString stringWithContentsOfFile:[openPanel filename] encoding:NSUTF8StringEncoding error:nil]];
 		[textView setSelectedRange:NSMakeRange(0, 0)];
 		[matchField setStringValue:@""];
 	}
